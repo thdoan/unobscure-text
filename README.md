@@ -1,37 +1,56 @@
-## Welcome to GitHub Pages
+# jQuery Unobscure Text
 
-You can use the [editor on GitHub](https://github.com/thdoan/unobscure-text/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Unobscure Text is a tiny jQuery plugin that allows you to apply a different style to text as soon as a target element scrolls into it. This is useful in cases where you have a fixed header with a transparent background, and you want the header text to remain legible when an image with the same color as the text is scrolled underneath the text.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+**[Demo &raquo;](https://thdoan.github.io/unobscure-text/demo.html)**
 
-### Markdown
+## Getting Started
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Step 1: Link the required files
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```
+<script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="/js/jquery.unobscure.js"></script>
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### Step 2: Call the plugin method
 
-### Jekyll Themes
+Make sure this comes after the two required JavaScript files from Step 1 are loaded.
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/thdoan/unobscure-text/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+```
+<script>
+$(document).ready(function() {
+  $('#menu a').unobscure({
+    target: '#promos img',
+    textCss: 'color:#fff'
+  });
+});
+</script>
+```
 
-### Support or Contact
+In the example above, `#menu a` will be applied the CSS `color:#fff` when `#promos img` scrolls into it.
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+NOTE: The element the plugin is invoked on (e.g., `#menu a`) should always point to the text's immediate parent.
+
+## Options
+
+Name      | Type   | Default  | Description
+----------| ------ | -------- | -----------
+`target`  | string | ''       | Selector to the obstruction element.
+`textCss` | string | ''       | The style to apply to the text when `target` scrolls into it.
+
+To change the default options, add this line once before making the first call to the plugin method:
+
+```
+$.fn.unobscure.defaults.textCss = 'color:#fff';
+```
+
+## Installation
+
+Choose from one of the following methods:
+
+- `git clone git@github.com:thdoan/unobscure-text.git`
+- `git clone https://github.com/thdoan/unobscure-text.git`
+- `bower install unobscure-text`
+- `npm install unobscure-text`
+- [Download ZIP](https://github.com/thdoan/unobscure-text/archive/master.zip)

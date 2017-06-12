@@ -1,0 +1,25 @@
+{
+  "name": "unobscure-text",
+  "version": "1.0.0",
+  "description": "Dynamically change text style as you scroll the page.",
+  "keywords": [
+    "jquery plugin",
+    "clip path",
+    "svg mask",
+    "text style"
+  ],
+  "homepage": "https://thdoan.github.io/unobscure-text/",
+  "bugs": {
+    "url": "https://github.com/thdoan/unobscure-text/issues"
+  },
+  "license": "MIT",
+  "author": "T. H. Doan <thdoan@gmail.com> (http://www.tohodo.com/)",
+  "main": "dist/jquery.unobscure.js",
+  "dependencies": {
+    "jquery": ">=1.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thdoan/unobscure-text.git"
+  }
+}

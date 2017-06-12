@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<title>jQuery Unobscure Text Demo</title>
+<style>
+body {
+  font: normal 16px/1.2 Calibri, sans-serif;
+  margin: 0;
+}
+a {
+  color: #000;
+  text-decoration: none;
+}
+a:hover, a:hover:after {
+  color: #39dbac !important;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+header img {
+  margin: 1rem 0;
+}
+img[src^="holder"] {
+  visibility: hidden; /* Prevent FOUC */
+}
+section {
+  margin-top: 200px;
+  text-align: center;
+}
+#menu {
+  margin: 0 auto;
+  padding: 0;
+}
+#menu li {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 1rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js"></script>
+</head>
+<body>
+
+<header>
+  <img src="holder.js/192x25?text=Logo&theme=vine" alt="Logo">
+  <nav>
+    <ul id="menu">
+      <li><a href="#">Nav One</a></li>
+      <li><a href="#">Nav Two</a></li>
+      <li><a href="#">Nav Three</a></li>
+      <li><a href="#">Nav Four</a></li>
+      <li><a href="#">Nav Five</a></li>
+      <li><a href="#">Nav Six</a></li>
+      <li><a href="#">Nav Seven</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section>
+  <img src="holder.js/1280x640?text=Banner%201&bg=000000" alt="Banner 1"><br>
+  <img src="holder.js/1280x640?text=Banner%202&bg=000000" alt="Banner 2"><br>
+  <img src="holder.js/1280x640?text=Banner%203&bg=000000" alt="Banner 3"><br>
+</section>
+
+<!--[if lt IE 9]>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<![endif]-->
+<!--[if IE 9]><!-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<!--<![endif]-->
+<script src="dist/js/jquery.unobscure.js"></script>
+<script>
+$(document).ready(function() {
+  $('#menu a').unobscure({
+    target: 'section img',
+    textCss: 'color:#fff;text-shadow:0 0 2px rgba(0,0,0,0.8)'
+  });
+});
+</script>
+</body>
+</html>

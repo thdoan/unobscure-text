@@ -45,9 +45,9 @@ To change the default options, add this line once before making the first call t
 $.fn.unobscure.defaults.textCss = 'color:#fff';
 ```
 
-## Limitation
+## Requirements
 
-Does not work in IE 11 and below :(.
+Modern browsers, and IE 9 and above.
 
 ## Installation
 

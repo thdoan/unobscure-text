@@ -1,7 +1,7 @@
 {
   "name": "unobscure-text",
   "description": "Dynamically change text style as you scroll the page.",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "main": [
     "dist/jquery.unobscure.js"
   ],
@@ -14,8 +14,7 @@
   ],
   "keywords": [
     "jquery plugin",
-    "clip path",
-    "svg mask",
+    "clip",
     "text style"
   ],
   "authors": [

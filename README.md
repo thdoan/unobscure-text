@@ -47,7 +47,8 @@ $.fn.unobscure.defaults.textCss = 'color:#fff';
 
 ## Requirements
 
-Modern browsers, and IE 9 and above.
+- Modern browsers, and IE 9 and above.
+- jQuery 2.x and below. If you need to use jQuery 3.x, then I recommend the [jq-clipthru plugin](https://github.com/salsita/jq-clipthru) instead.
 
 ## Installation
 

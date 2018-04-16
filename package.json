@@ -12,7 +12,7 @@
     "url": "https://github.com/thdoan/unobscure-text/issues"
   },
   "license": "MIT",
-  "author": "T. H. Doan <thdoan@gmail.com> (http://www.tohodo.com/)",
+  "author": "T. H. Doan <thdoan@gmail.com> (http://www.tohodo.com)",
   "main": "dist/jquery.unobscure.js",
   "dependencies": {
     "jquery": ">=1.7.0"
